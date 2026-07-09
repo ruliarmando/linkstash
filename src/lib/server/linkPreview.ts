@@ -6,8 +6,6 @@ export async function fetchPageTitle(rawUrl: string): Promise<string | null> {
 		return null;
 	}
 
-	console.log(parsed);
-
 	// only ever fetch plain web URLs — never file:, internal schemes, etc.
 	if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
 		return null;
